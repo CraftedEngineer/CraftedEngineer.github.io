@@ -55,18 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="还原乘客出行路径 效果预览输入数据：乘客编号、始发车站、目的车站、进站刷卡时间、出站刷卡时间输出数据：列车1 ——&amp;gt; 列车2 ——&amp;gt; 列车3 ···    具体算法思想   优化路径选择 怎样衡量拥挤程度？">
+  <meta name="description" content="还原乘客出行路径 效果预览输入数据：乘客编号、始发车站、目的车站、进站刷卡时间、出站刷卡时间输出数据：列车1 ——&amp;gt; 列车2 ——&amp;gt; 列车3 ···    具体算法思想    如何存图先将车站名进行编号ID，弄一个边的数据结构，里面存的是边的起点和终点的车站名对应的编号ID，还有长度作为权重。（后面一开始的最短路径算法权重直接就是长度，之后改进后需要考虑拥挤程度之类的，就需要动态改变线">
 <meta name="keywords" content="比赛实录">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据驱动的城市轨道交通优化策略">
 <meta property="og:url" content="http://ginger-blog.com/2019/08/18/A题：数据驱动的城市轨道交通优化策略/index.html">
 <meta property="og:site_name" content="Ginger&#39;s Life">
-<meta property="og:description" content="还原乘客出行路径 效果预览输入数据：乘客编号、始发车站、目的车站、进站刷卡时间、出站刷卡时间输出数据：列车1 ——&amp;gt; 列车2 ——&amp;gt; 列车3 ···    具体算法思想   优化路径选择 怎样衡量拥挤程度？">
+<meta property="og:description" content="还原乘客出行路径 效果预览输入数据：乘客编号、始发车站、目的车站、进站刷卡时间、出站刷卡时间输出数据：列车1 ——&amp;gt; 列车2 ——&amp;gt; 列车3 ···    具体算法思想    如何存图先将车站名进行编号ID，弄一个边的数据结构，里面存的是边的起点和终点的车站名对应的编号ID，还有长度作为权重。（后面一开始的最短路径算法权重直接就是长度，之后改进后需要考虑拥挤程度之类的，就需要动态改变线">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-18T09:04:03.188Z">
+<meta property="og:updated_time" content="2019-08-18T12:55:38.234Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据驱动的城市轨道交通优化策略">
-<meta name="twitter:description" content="还原乘客出行路径 效果预览输入数据：乘客编号、始发车站、目的车站、进站刷卡时间、出站刷卡时间输出数据：列车1 ——&amp;gt; 列车2 ——&amp;gt; 列车3 ···    具体算法思想   优化路径选择 怎样衡量拥挤程度？">
+<meta name="twitter:description" content="还原乘客出行路径 效果预览输入数据：乘客编号、始发车站、目的车站、进站刷卡时间、出站刷卡时间输出数据：列车1 ——&amp;gt; 列车2 ——&amp;gt; 列车3 ···    具体算法思想    如何存图先将车站名进行编号ID，弄一个边的数据结构，里面存的是边的起点和终点的车站名对应的编号ID，还有长度作为权重。（后面一开始的最短路径算法权重直接就是长度，之后改进后需要考虑拥挤程度之类的，就需要动态改变线">
   <link rel="canonical" href="http://ginger-blog.com/2019/08/18/A题：数据驱动的城市轨道交通优化策略/">
 
 
@@ -224,7 +224,7 @@
                 
               
 
-              <time title="Created: 2019-08-18 11:10:40 / Modified: 17:04:03" itemprop="dateCreated datePublished" datetime="2019-08-18T11:10:40+08:00">2019-08-18</time>
+              <time title="Created: 2019-08-18 11:10:40 / Modified: 20:55:38" itemprop="dateCreated datePublished" datetime="2019-08-18T11:10:40+08:00">2019-08-18</time>
             </span>
           
             
@@ -249,8 +249,11 @@
 <li><p>具体算法思想</p>
 </li>
 </ol>
+<ul>
+<li>如何存图<br>先将车站名进行编号ID，弄一个边的数据结构，里面存的是边的起点和终点的车站名对应的编号ID，还有长度作为权重。（后面一开始的最短路径算法权重直接就是长度，之后改进后需要考虑拥挤程度之类的，就需要动态改变线路的权重，这时候的权重不单是路径长度）<br>再弄一个点的数据结构，用一个数组之类的存储一个个map对，以&lt;路线，车站编号&gt;的形式，用于对应关系的查找</li>
+</ul>
 <h1 id="优化路径选择"><a href="#优化路径选择" class="headerlink" title="优化路径选择"></a>优化路径选择</h1><ol>
-<li>怎样衡量拥挤程度？</li>
+<li>怎样衡量拥挤程度？<br>详情见“团队讨论要点”章节</li>
 </ol>
 
     </div>
