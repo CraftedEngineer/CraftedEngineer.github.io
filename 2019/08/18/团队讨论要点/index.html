@@ -65,7 +65,9 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://s2.ax1x.com/2019/08/18/mlCXvT.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/08/18/mlCBuD.png">
-<meta property="og:updated_time" content="2019-08-18T13:59:54.000Z">
+<meta property="og:image" content="https://s2.ax1x.com/2019/08/19/mlw8p9.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/08/19/mlwNm6.jpg">
+<meta property="og:updated_time" content="2019-08-19T00:45:46.868Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="团队讨论要点">
 <meta name="twitter:description" content="明政 可能会和别的线路之间有着彼此的联系关系。 要尽量减少乘客出行时间和滞留时间，因此在不同的时间段和客流量下，限流的时间段可能无法简单的确定。 不同的时间段中线路的开放情况可能不同？跨时间段的问题 具体的方法？要用目标函数的方法吗？关于目标函数的确定，指标是什么，如何平衡这些问题。 缩短出行时间换乘和等待的时间进行比较，智能地确定，，，，，给出一个方法先可以判断，要是换乘的话还要对比所有的可能性">
@@ -227,11 +229,19 @@
                 
               
 
-              <time title="Created: 2019-08-18 11:27:39 / Modified: 21:59:54" itemprop="dateCreated datePublished" datetime="2019-08-18T11:27:39+08:00">2019-08-18</time>
+              <time title="Created: 2019-08-18 11:27:39" itemprop="dateCreated datePublished" datetime="2019-08-18T11:27:39+08:00">2019-08-18</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-08-19 08:45:46" itemprop="dateModified" datetime="2019-08-19T08:45:46+08:00">2019-08-19</time>
+              </span>
             
           
 
@@ -275,6 +285,15 @@
 </ol>
 <h1 id="泽烁"><a href="#泽烁" class="headerlink" title="泽烁"></a>泽烁</h1><ol>
 <li>如何存图<br>先将车站名进行编号ID，弄一个边的数据结构，里面存的是边的起点和终点的车站名对应的编号ID，还有长度作为权重。（后面一开始的最短路径算法权重直接就是长度，之后改进后需要考虑拥挤程度之类的，就需要动态改变线路的权重，这时候的权重不单是路径长度）<br>再弄一个点的数据结构，用一个数组之类的存储一个个map对，以&lt;路线，车站编号&gt;的形式，用于对应关系的查找。</li>
+<li>出行时段分布、出行时长分布：画出一个概率分布图，可以直接由数据得到。<br><img src="https://s2.ax1x.com/2019/08/19/mlw8p9.jpg" alt><br>也可以再画图：横坐标为时间，纵坐标为客流量百分比的图。</li>
+<li>出行距离分布：最终得到的是一个出行距离的概率分布函数，横坐标为出行距离，纵坐标为概率。</li>
+</ol>
+<ul>
+<li>方法：建立一个小的模型（也就是一个出行距离的概率分布函数）对数据进行处理，不过其实这个概率分布我们自己是可以算出来的（把所给的数据当作一个样本集就可以算出来了）。然后我们有了一个理论上的模型和一个样本集的数据，这样我们可以拟合一下这两者，拟合的作用是为了说明我们的小模型建立的很准确。<br><img src="https://s2.ax1x.com/2019/08/19/mlwNm6.jpg" alt><br><a href="https://wenku.baidu.com/view/323fff60580216fc710afd1c.html" target="_blank" rel="noopener">出行距离分布及参数研究</a></li>
+</ul>
+<ol start="4">
+<li>应该可以用那个遗传算法，就是把明政发的第一篇论文里面的电梯调度算法的多目标规划建模改成用遗传算法的，一解变多解。</li>
+<li>那个模糊神经网络论文里面是用于交通模式的识别，我们需要识别的话也可以加进入，不过可能会显得比较臃肿。</li>
 </ol>
 
     </div>
