@@ -193,6 +193,106 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://ginger-blog.com/2019/08/19/姜浩的任务列表/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="姜浩">
+      <meta itemprop="description" content="生而为人，我很荣幸">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ginger's Life">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/08/19/姜浩的任务列表/" class="post-title-link" itemprop="url">姜浩的任务列表</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2019-08-19 20:51:31" itemprop="dateCreated datePublished" datetime="2019-08-19T20:51:31+08:00">2019-08-19</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-08-20 09:51:51" itemprop="dateModified" datetime="2019-08-20T09:51:51+08:00">2019-08-20</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="建立城市轨道交通单一乘客线路限流模型"><a href="#建立城市轨道交通单一乘客线路限流模型" class="headerlink" title="建立城市轨道交通单一乘客线路限流模型"></a>建立城市轨道交通单一乘客线路限流模型</h1><ol>
+<li>根据一定的原则选出准备限流的车站，然后对这些车站进行限流操作，取其中限流效果最好的车站进行实际限流操作并用此数据填表。</li>
+<li>如何将限流车站数变量加入约束条件？限流车站数变量对整体模型有何影响？</li>
+</ol>
+<ul>
+<li>数量为N限流车站的具体选取<br>选择日均客流量排名前N的车站进行限流？这样似乎有点不太科学，是的，确实不太科学··· 所以这里要使用下面流量承受能力的思想，</li>
+<li></li>
+</ul>
+<ol>
+<li>怎么选取限流车站？<br>根据什么标准将其筛选出来，这个标准的衡量指标是什么<br>根据该车站的“综合影响力”，这里的综合影响力是指如果该车站限流，能带给该条线路最大的收益，所以想找一些要素来表示出这个“综合影响力”</li>
+</ol>
+<ul>
+<li>为什么A车站限流会比B车站限流效果要好<br>首先因为A车站的总流量较大，这造成了A车站对后续车站的流量影响较大，这意味着若A车站不限流，其后面车站的<strong>流量承受能力</strong>就会收到大幅度的影响。</li>
+</ul>
+<ol>
+<li>流量承受能力是什么意思<br>流量承受能力表示某车站对其后续车站影响能力的总和，这里存在一个优化，限流不同的车站，分别计算限流后该线的流量承受能力，取承受能力排名前几的限流车站作为可选限流车站。</li>
+<li>整理泽烁发的第一问的算法和第二问的结果</li>
+</ol>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://ginger-blog.com/2019/08/19/比赛经验积累/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -222,7 +322,7 @@
                 
               
 
-              <time title="Created: 2019-08-19 14:37:05 / Modified: 14:46:42" itemprop="dateCreated datePublished" datetime="2019-08-19T14:37:05+08:00">2019-08-19</time>
+              <time title="Created: 2019-08-19 14:37:05 / Modified: 22:01:05" itemprop="dateCreated datePublished" datetime="2019-08-19T14:37:05+08:00">2019-08-19</time>
             </span>
           
             
@@ -246,6 +346,16 @@
 <li>团队讨论要点</li>
 <li>题目具体思路及其实现<h2 id="数模选题"><a href="#数模选题" class="headerlink" title="数模选题"></a>数模选题</h2>这一部分主要记录刚看题时大家的思路和想法，以及觉得要选择哪个题，并最终确定选题<h2 id="团队讨论要点"><a href="#团队讨论要点" class="headerlink" title="团队讨论要点"></a>团队讨论要点</h2>这一部分是对比赛进行过程中大家的想法的实时记录，这一部分可能会显得有些杂乱，这部分内容都是大家灵感乍现的表现，是后面解题的思想来源<h2 id="题目具体思路及其实现"><a href="#题目具体思路及其实现" class="headerlink" title="题目具体思路及其实现"></a>题目具体思路及其实现</h2>这一部分首先具有有序性，思路清晰而准确，是为了给团队成员统一思路，明确大家各个阶段的任务而准备的，其次这一部分记录了解题的具体方法和思想，还包含了对相关文献可利用部分的分析，为具体的实现打下了基础。</li>
 </ol>
+<h1 id="记录相关文献时的要点"><a href="#记录相关文献时的要点" class="headerlink" title="记录相关文献时的要点"></a>记录相关文献时的要点</h1><ol>
+<li>明确当前要处理的具体问题及其可能的问题本质</li>
+<li>寻找并筛选出可能有用的文献并有序编号</li>
+<li>筛选时利用摘要进行初步筛选，选出大概5篇左右作为准备阅读文献，开始阅读记录</li>
+<li>阅读文献时需要关注：</li>
+</ol>
+<ul>
+<li>这篇文献解决了什么问题，和我们待处理的问题有什么关系，这篇文献中可能有用的思想或方法有哪些，这些思想和方法和实际题目相比，有什么优点和局限性。</li>
+</ul>
+<h1 id="团队合作要点"><a href="#团队合作要点" class="headerlink" title="团队合作要点"></a>团队合作要点</h1><p>每一时刻都要明白自己在做什么，做这些事情的目标是什么，做这些事情对整体问题的求解存在什么意义，队友目前都在做什么，我们做的这些事情之间的联系是什么。</p>
 
         
       
@@ -312,7 +422,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-08-19 08:45:46" itemprop="dateModified" datetime="2019-08-19T08:45:46+08:00">2019-08-19</time>
+                <time title="Modified: 2019-08-19 22:01:05" itemprop="dateModified" datetime="2019-08-19T22:01:05+08:00">2019-08-19</time>
               </span>
             
           
@@ -345,14 +455,14 @@
 <li>储存的网图信息每个点根据题目信息要求建立对应的车站，比如北土城站对应10号线的207,然后根据附件1中乘客的始发车站和目的地车站信息按照最短路线的原则设计寻找路线的算法</li>
 <li>简单来说第二问第一个算法的思路就是 存储图 建立站点对应 设计最短路线算法</li>
 </ul>
-<ol start="2">
+<ol>
 <li>怎样衡量拥挤程度？<br>经过讨论，认为应该根据起始站点、目的站点、进站刷卡时间和出站刷卡时间得到每个人每时刻所在的站点，然后将所有人的该信息综合起来，得到整个地铁线路每时刻或每个时间段的乘坐人数，然后根据这个乘坐人数可以构造一个表示拥挤度的比例数值。分析每个人的行程的时候，以这段时间内该站的拥挤度作为衡量和优化要素</li>
 </ol>
 <ul>
 <li>补充<br>拥挤程度的影响因素主要有两个方面，车上人数和车站人数，经过讨论，我们认为第二问没有必要考虑车上人数的变化，就是认为车上人数是没有限制的，因为这种限制会在第三问进行详细讨论，我们主要考虑的部分是关于车站人数的拥挤度问题，那么到底什么是拥挤，这里的减少拥挤意味着什么？<br>我们认为，减少拥挤主要包含两层含义，第一层含义是有序，第二层含义是在可选择的范围内选择最空闲的路线，这两层含义是相互关联着的，首先是有序，地铁是一个时间固定化的交通公共工具，这意味着车门每次开关有严格的时间把控，这期间能上多少人大致是固定的，在这期间没能上车的人只能等待下一趟车，经过估算，每个时间间隔平均大概能上20人左右，这里面有个前提是所有人按顺序排队，先到先走，在这第一层的含义上，接着解释第二层含义，考虑这样一个情景，一位乘客由于到站较晚，没有赶得上前一班车，此时他就可以考虑更换一条不是距离最近，但是是较为空闲的的线路，这样就可以实现人流量的分离控制，并且也符合各位乘客的利益。关于这一部分可以使用多目标调度相关算法，包括电梯调度算法，分层序列法等，推荐使用基于改进遗传算法的多目标调度优化分层序列法。 基于某种高级神经网络的电梯调度算法也是一个很不错的选择。</li>
 <li>分层序列法<br><img src="https://s2.ax1x.com/2019/08/18/mlCBuD.png" alt></li>
 </ul>
-<ol start="3">
+<ol>
 <li>如何得到地铁实时的人数变化？<br>以车次号为研究对象，以车次的时间经过为时间段，将乘客O-D数据作为参数代入，得到每个时间段每个车次号的人数变化。</li>
 </ol>
 <h1 id="泽烁"><a href="#泽烁" class="headerlink" title="泽烁"></a>泽烁</h1><ol>
@@ -363,7 +473,7 @@
 <ul>
 <li>方法：建立一个小的模型（也就是一个出行距离的概率分布函数）对数据进行处理，不过其实这个概率分布我们自己是可以算出来的（把所给的数据当作一个样本集就可以算出来了）。然后我们有了一个理论上的模型和一个样本集的数据，这样我们可以拟合一下这两者，拟合的作用是为了说明我们的小模型建立的很准确。<br><img src="https://s2.ax1x.com/2019/08/19/mlwNm6.jpg" alt><br><a href="https://wenku.baidu.com/view/323fff60580216fc710afd1c.html" target="_blank" rel="noopener">出行距离分布及参数研究</a></li>
 </ul>
-<ol start="4">
+<ol>
 <li>应该可以用那个遗传算法，就是把明政发的第一篇论文里面的电梯调度算法的多目标规划建模改成用遗传算法的，一解变多解。</li>
 <li>那个模糊神经网络论文里面是用于交通模式的识别，我们需要识别的话也可以加进入，不过可能会显得比较臃肿。</li>
 </ol>
@@ -433,7 +543,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-08-19 19:26:41" itemprop="dateModified" datetime="2019-08-19T19:26:41+08:00">2019-08-19</time>
+                <time title="Modified: 2019-08-20 14:47:28" itemprop="dateModified" datetime="2019-08-20T14:47:28+08:00">2019-08-20</time>
               </span>
             
           
@@ -449,7 +559,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h1><p><img src="https://s2.ax1x.com/2019/08/18/mQzqXQ.png" alt></p>
+          <p><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script></p>
+<h1 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h1><p><img src="https://s2.ax1x.com/2019/08/18/mQzqXQ.png" alt></p>
 <h1 id="任务总览"><a href="#任务总览" class="headerlink" title="任务总览"></a>任务总览</h1><ol>
 <li>绘制乘客出行特征图：出行时间分布曲线和出行距离分布图，其中出行距离分布图使用出行距离的概率分布函数来表示。</li>
 <li>还原乘客出行路径</li>
@@ -462,8 +573,13 @@
 <li>出行距离分布：最终得到的是一个出行距离的概率分布函数，横坐标为出行距离，纵坐标为概率。</li>
 </ol>
 <ul>
-<li>方法：建立一个小的模型（也就是一个出行距离的概率分布函数）对数据进行处理，不过其实这个概率分布我们自己是可以算出来的（把所给的数据当作一个样本集就可以算出来了）。然后我们有了一个理论上的模型和一个样本集的数据，这样我们可以拟合一下这两者，拟合的作用是为了说明我们的小模型建立的很准确。<br><img src="https://s2.ax1x.com/2019/08/19/mlwNm6.jpg" alt><br><a href="https://wenku.baidu.com/view/323fff60580216fc710afd1c.html" target="_blank" rel="noopener">出行距离分布及参数研究</a></li>
+<li>方法：建立一个小的模型（也就是一个出行距离的概率分布函数）对数据进行处理，不过其实这个概率分布我们自己是可以算出来的（把所给的数据当作一个样本集就可以算出来了）。然后我们有了一个理论上的模型和一个样本集的数据，这样我们可以拟合一下这两者，拟合的作用是为了说明我们的小模型建立的很准确。<br><img src="https://s2.ax1x.com/2019/08/19/mlwNm6.jpg" alt><br><a href="https://wenku.baidu.com/view/323fff60580216fc710afd1c.html" target="_blank" rel="noopener">出行距离分布及参数研究</a><h3 id="算法以及处理结果"><a href="#算法以及处理结果" class="headerlink" title="算法以及处理结果"></a>算法以及处理结果</h3></li>
 </ul>
+<ol>
+<li>出行时段分布<br>对数据进行简单处理后，以时间作为横坐标轴，将其以每小时为单位进行划分，对于个时刻，统计进站时间到出战时间的这段出行时段内包含有该时刻的乘客个数，累加后求其占全部人数的概率，最终得到出行时段概率分布图如下。<br><img src="https://s2.ax1x.com/2019/08/20/m8oZLt.png" alt="m8oZLt.png"></li>
+<li>出行时长分布<br>对数据进行简单处理后，记乘客的出战刷卡时刻为出行截止时间，进站时刻为出行起始时间，两者相减得到出行时长，累计各个乘客的出行时长并计算其占全部人数的概率，最终得到出行时长概率分布图如下。<br><img src="https://s2.ax1x.com/2019/08/20/m8oJLq.png" alt="m8oJLq.png"></li>
+<li>3.出行距离分布<br>下面是一个理想化的模型，可以得到一个出行距离概率分布的函数，引入这个模型的目的是为了得到一个函数，但是里面的参数没有确定，所以需要拟合我们的实际数据确定参数，最终得到的是一个参数确定的函数，以此函数作为我们得到的出行距离分布函数。<br><img src="https://s2.ax1x.com/2019/08/20/m87CgH.jpg" alt="m87CgH.jpg"><br><img src="https://s2.ax1x.com/2019/08/20/m87Abt.jpg" alt="m87Abt.jpg"><br>可以看到我们实际得到的数据的分布与上面的右图是十分吻合的，下面进行拟合。<br>对于拟合结果的分析：<br><img src="https://s2.ax1x.com/2019/08/20/m87lKs.jpg" alt="m87lKs.jpg"><br>本文采用瑞利密度函数作为基本函数形式进行拟合。采用matlab软件进行拟合，拟合后确定参数入为0.021263，R的平方为0.966，最终的分布函数为<script type="math/tex; mode=display">F(r) = 1 - \exp ( - 0.021263{r^2})</script>从拟合结果可以看出，出行距离分布与瑞利密度函数的吻合程度很高，拟合的相关系数R的平方大于95%，因此，用瑞利分布来描述出行距离分布具有很高的可信度。</li>
+</ol>
 <h2 id="还原乘客出行路径"><a href="#还原乘客出行路径" class="headerlink" title="还原乘客出行路径"></a>还原乘客出行路径</h2><ol>
 <li>效果预览<br>输入数据：乘客编号、始发车站、目的车站、进站刷卡时间、出站刷卡时间<br>输出数据：该乘客出行路径：列车1 (换乘站)——&gt; 列车2(换乘站) ——&gt; 列车3(换乘站) ···  </li>
 <li>还原前提<br>题目已知条件是某位乘客的始发车站、目的车站以及其进站刷卡和出站刷卡时间，除了起点终点有限制外，出行时间也卡了一个范围，首先考虑始发车站到目的车站，实际行走的路线情况数可能会有很多，我们在根据实际情况做一个假设：所有人默认走起点到终点的最短路径，然后根据乘客的时间范围进行验证，如果计算出理论时间范围和实际时间范围误差在10%以内，我们就认为这个假设是合理的，并将假设的最短路径作为还原路径，但如果误差过大，那么我们再寻找其他合理的路径。</li>
@@ -491,7 +607,14 @@
 <li>思路梳理</li>
 </ul>
 <ol>
-<li>总目标：乘客出行总时间最短，出行总时间包括坐车时间和延误时间，延误时间包括站台等车时间、因限流造成的延误时间、因留乘造成的延误时间。</li>
+<li>总目标：</li>
+</ol>
+<ul>
+<li>乘客出行总时间最短，出行总时间包括坐车时间和延误时间，延误时间包括站台等车时间、因限流造成的延误时间、因留乘造成的延误时间。</li>
+<li>现有的交通网络运输能力效率(路网能力效率)</li>
+<li>受延误的客流量最小</li>
+</ul>
+<ol>
 <li>约束条件：</li>
 </ol>
 <ul>
@@ -499,16 +622,17 @@
 <li>列车位置信息约束</li>
 <li>站台乘客上下车行为约束</li>
 <li>延误时间惩罚系数对总目标出行时间的影响</li>
+<li>站台的容纳能力约束</li>
 </ul>
-<ol start="3">
+<ol>
 <li>求解：使用基于随机比例算子扰动的改进模拟退火算法(参考文献3)</li>
 </ol>
 <ul>
 <li>参考文献</li>
 </ul>
 <ol>
-<li><a href="https://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&dbname=CJFDLAST2018&filename=GDJT201810009&uid=WEEvREcwSlJHSldRa1FhdXNXaEdzT2ZxQy9DUkR5elViZnJWd0JUZkxwcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!&v=MzAwMDJuQmVyRzRIOW5OcjQ5RmJZUjhlWDFMdXhZUzdEaDFUM3FUcldNMUZyQ1VSTE9mYitkbUZpRGhVTHpJSWk=" target="_blank" rel="noopener">基于短时客流预测的地铁动态限流预警模型研究_杨安安</a><br>将短时预测与限流预警相结合, 按照预测-预警-限流实施方案的思路, 在用小波神经网络进行短时客流预测的基础上, 对比列车的剩余运力再结合关键设备设施的限流阈值来制定具体的动态限流预警方案。<br>该参考文献的应用场景是某个地铁站点，其重要意义在于限流模式的启示，它在考虑流量时应用了未来可能的流量，就是通过预测未来的流量进行预警，这样可以有效的分担客流量。但同时也存在一个问题，题目要求计算单线限流，而本题只针对站点的限流，如何将站点的应用扩展到线路，或者用其他针对线路的方法时如何结合该文献站点的方法，需要再认真想一想。</li>
-<li><a href="https://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CMFD&dbname=CMFD201701&filename=1017058612.nh&uid=WEEvREcwSlJHSldRa1FhdkJkVG1EWnA2UHhVcDU1cjNONDBTd1lZeWtHQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!&v=MDU2MjVMT2ZiK2RtRnlubVY3N0xWRjI2R2JPOUZ0Zk5yWkViUElSOGVYMUx1eFlTN0RoMVQzcVRyV00xRnJDVVI=" target="_blank" rel="noopener">城市轨道交通路网客流传播建模与限流策略研究</a><br>提出面向常态高峰,基于客流推演的限流策略制定方法。借助客流推演识别限流车站和限流时段<br>该参考文献的亮点如下：</li>
+<li><a href="https://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&amp;dbname=CJFDLAST2018&amp;filename=GDJT201810009&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEdzT2ZxQy9DUkR5elViZnJWd0JUZkxwcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!&amp;v=MzAwMDJuQmVyRzRIOW5OcjQ5RmJZUjhlWDFMdXhZUzdEaDFUM3FUcldNMUZyQ1VSTE9mYitkbUZpRGhVTHpJSWk=" target="_blank" rel="noopener">基于短时客流预测的地铁动态限流预警模型研究_杨安安</a><br>将短时预测与限流预警相结合, 按照预测-预警-限流实施方案的思路, 在用小波神经网络进行短时客流预测的基础上, 对比列车的剩余运力再结合关键设备设施的限流阈值来制定具体的动态限流预警方案。<br>该参考文献的应用场景是某个地铁站点，其重要意义在于限流模式的启示，它在考虑流量时应用了未来可能的流量，就是通过预测未来的流量进行预警，这样可以有效的分担客流量。但同时也存在一个问题，题目要求计算单线限流，而本题只针对站点的限流，如何将站点的应用扩展到线路，或者用其他针对线路的方法时如何结合该文献站点的方法，需要再认真想一想。</li>
+<li><a href="https://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CMFD&amp;dbname=CMFD201701&amp;filename=1017058612.nh&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG1EWnA2UHhVcDU1cjNONDBTd1lZeWtHQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!&amp;v=MDU2MjVMT2ZiK2RtRnlubVY3N0xWRjI2R2JPOUZ0Zk5yWkViUElSOGVYMUx1eFlTN0RoMVQzcVRyV00xRnJDVVI=" target="_blank" rel="noopener">城市轨道交通路网客流传播建模与限流策略研究</a><br>提出面向常态高峰,基于客流推演的限流策略制定方法。借助客流推演识别限流车站和限流时段<br>该参考文献的亮点如下：</li>
 </ol>
 <ul>
 <li>基于元胞自动机(CA)的城轨单一线路客流传播模型</li>
@@ -516,19 +640,19 @@
 <li>提出面向常态高峰,基于客流推演的限流策略制定方法</li>
 <li>提出的限流策略制定方法能够为实际限流提供包含限流车站、限流时段和限流强度的量化方案<br>该参考文献应用情况适用于不考虑换乘的单条线路，使用此方法的话需要思考如何把换乘要素合理加入。并且如果要全流程构建的话又感觉略显繁琐，所以建议可以根据需要从其中选取某个部分进行应用，但这样又会有一个问题，这几个模型之间似乎是相互关联，互为前提的，单独使用会不会不太妥当也要再想想。</li>
 </ul>
-<ol start="3">
-<li><a href="https://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CMFD&dbname=CMFD201802&filename=1018144253.nh&v=MTIwODR1eFlTN0RoMVQzcVRyV00xRnJDVVJMT2ZiK2RtRnlqbFY3M0lWRjI2RnJLOEd0UEpySkViUElSOGVYMUw=" target="_blank" rel="noopener">城市轨道交通单线协同限流策略优化研究</a><br>该参考文献和题目十分贴合！甚至连数据啥的都是完全一致的，让人怀疑题目是根据这篇论文出的<br>核心：单线协同限流策略优化<br>目标函数：总出行延误时间<br>约束条件：</li>
+<ol>
+<li><a href="https://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CMFD&amp;dbname=CMFD201802&amp;filename=1018144253.nh&amp;v=MTIwODR1eFlTN0RoMVQzcVRyV00xRnJDVVJMT2ZiK2RtRnlqbFY3M0lWRjI2RnJLOEd0UEpySkViUElSOGVYMUw=" target="_blank" rel="noopener">城市轨道交通单线协同限流策略优化研究</a><br>该参考文献和题目十分贴合！甚至连数据啥的都是完全一致的，让人怀疑题目是根据这篇论文出的<br>核心：单线协同限流策略优化<br>目标函数：总出行延误时间<br>约束条件：</li>
 </ol>
 <ul>
 <li>进站口乘客出行行为约束</li>
 <li>列车位置信息约束</li>
 <li>站台乘客上下车行为约束</li>
 </ul>
-<ol start="4">
-<li><a href="https://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CMFD&dbname=CMFD201802&filename=1018976884.nh&v=MjI3MzZVTHZQVkYyNkZycS9HTm5FcTVFYlBJUjhlWDFMdXhZUzdEaDFUM3FUcldNMUZyQ1VSTE9mYitkbUZ5M2g=" target="_blank" rel="noopener">城市轨道交通网络协同限流理论与方法研究</a></li>
+<ol>
+<li><a href="https://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CMFD&amp;dbname=CMFD201802&amp;filename=1018976884.nh&amp;v=MjI3MzZVTHZQVkYyNkZycS9HTm5FcTVFYlBJUjhlWDFMdXhZUzdEaDFUM3FUcldNMUZyQ1VSTE9mYitkbUZ5M2g=" target="_blank" rel="noopener">城市轨道交通网络协同限流理论与方法研究</a></li>
 </ol>
-<ol start="5">
-<li><a href="https://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CMFD&dbname=CMFD201602&filename=1016058931.nh&uid=WEEvREcwSlJHSldRa1FhdXNXaEdzT2ZxQ29uRlpsbDRjZll0ZkNxRlhjST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!&v=MTQ0NjVMTzlGdGpQcnBFYlBJUjhlWDFMdXhZUzdEaDFUM3FUcldNMUZyQ1VSTE9mYitkbUZ5M2hWTDdCVkYyNkc=" target="_blank" rel="noopener">城市轨道交通单线多站协同客流控制研究</a></li>
+<ol>
+<li><a href="https://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CMFD&amp;dbname=CMFD201602&amp;filename=1016058931.nh&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEdzT2ZxQ29uRlpsbDRjZll0ZkNxRlhjST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!&amp;v=MTQ0NjVMTzlGdGpQcnBFYlBJUjhlWDFMdXhZUzdEaDFUM3FUcldNMUZyQ1VSTE9mYitkbUZ5M2hWTDdCVkYyNkc=" target="_blank" rel="noopener">城市轨道交通单线多站协同客流控制研究</a></li>
 </ol>
 <p>这些优化模型的套路基本上都差不多，首先找一个目标函数，然后找几个优化条件，最后整一个高端大气上当次的算法进行计算处理，</p>
 
@@ -613,7 +737,7 @@
 <li>问题之间关联性紧密<br>问题从数据出发，开始的重点在分析数据，得到数据背后的特征，后面逐渐过渡到根据数据背后的特征进行实际问题的解决（包括还原乘客出行路径和优化乘客的路径选择），再到最后的实际应用：限流，这里有两部分：限流模型和限流建议，其中限流建议是难点，但这里可不用具体展开。</li>
 <li>题目问题要求具体<br>问题比较容易理解，指向性强，无歧义</li>
 </ul>
-<ol start="2">
+<ol>
 <li>题目的重难点以及初步理解的技术核心<br>本题的核心就是数据的特征提取和分析处理，因此，如果要做这个题，数据处理的方式和技巧直接影响本题的后续发展，我推荐使用机器学习中的无监督学习算法。<br>设计算法和限流模型部分需要根据数据处理后得到的出行时段分布、出行距离分布、出行时长分布情况进一步分析</li>
 </ol>
 <h2 id="B-环形穿梭系统的调度与设计"><a href="#B-环形穿梭系统的调度与设计" class="headerlink" title="B:环形穿梭系统的调度与设计"></a>B:环形穿梭系统的调度与设计</h2><ol>
@@ -677,7 +801,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -787,6 +911,72 @@
 
 
 
+  
+
+  
+    
+      
+    
+      
+    
+      
+    
+      
+        
+      
+    
+      
+    
+  
+    
+      
+<script type="text/x-mathjax-config">
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') {
+          next = next.nextSibling;
+        }
+        if (next && next.nodeName.toLowerCase() === 'br') {
+          next.parentNode.removeChild(next);
+        }
+      }
+    });
+  });
+
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
+      if (element.nodeName.toLowerCase() == 'li') {
+        element = element.parentNode;
+      }
+      element.classList.add('has-jax');
+    }
+  });
+</script>
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML', () => {
+    MathJax.Hub.Typeset();
+  }, window.MathJax);
+</script>
+
+    
   
 
   
