@@ -55,16 +55,16 @@
   };
 </script>
 
-  <meta name="description" content="生而为人，我很荣幸">
+  <meta name="description" content="什么都没有 什么都不缺">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Ginger&#39;s Life">
 <meta property="og:url" content="http://ginger-blog.com/index.html">
 <meta property="og:site_name" content="Ginger&#39;s Life">
-<meta property="og:description" content="生而为人，我很荣幸">
+<meta property="og:description" content="什么都没有 什么都不缺">
 <meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ginger&#39;s Life">
-<meta name="twitter:description" content="生而为人，我很荣幸">
+<meta name="twitter:description" content="什么都没有 什么都不缺">
   <link rel="canonical" href="http://ginger-blog.com/">
 
 
@@ -197,7 +197,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="姜浩">
-      <meta itemprop="description" content="生而为人，我很荣幸">
+      <meta itemprop="description" content="什么都没有 什么都不缺">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -233,7 +233,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-08-20 15:03:44" itemprop="dateModified" datetime="2019-08-20T15:03:44+08:00">2019-08-20</time>
+                <time title="Modified: 2019-08-20 15:44:32" itemprop="dateModified" datetime="2019-08-20T15:44:32+08:00">2019-08-20</time>
               </span>
             
           
@@ -298,7 +298,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="姜浩">
-      <meta itemprop="description" content="生而为人，我很荣幸">
+      <meta itemprop="description" content="什么都没有 什么都不缺">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -387,7 +387,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="姜浩">
-      <meta itemprop="description" content="生而为人，我很荣幸">
+      <meta itemprop="description" content="什么都没有 什么都不缺">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -508,7 +508,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="姜浩">
-      <meta itemprop="description" content="生而为人，我很荣幸">
+      <meta itemprop="description" content="什么都没有 什么都不缺">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -544,7 +544,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-08-20 15:04:23" itemprop="dateModified" datetime="2019-08-20T15:04:23+08:00">2019-08-20</time>
+                <time title="Modified: 2019-08-20 15:53:24" itemprop="dateModified" datetime="2019-08-20T15:53:24+08:00">2019-08-20</time>
               </span>
             
           
@@ -623,11 +623,10 @@
 </ul>
 <ol>
 <li>求解：使用基于随机比例算子扰动的改进模拟退火算法(参考文献3)<h3 id="限制限流车站数思路梳理"><a href="#限制限流车站数思路梳理" class="headerlink" title="限制限流车站数思路梳理"></a>限制限流车站数思路梳理</h3></li>
-<li>分析：</li>
+<li>分析：<br>上面做关于不限制限流车站个数的问题时，是从整条线路角度考虑的问题，就是说是一个综合全局最优的策略，一开始的想法是如何将限流车站的个数作为约束条件加入上述模型，但发现车站数的选取这个问题在上述模型中的各个约束条件处都有所体现和很深刻的影响，很难单独再将车站数作为新的约束条件，所以接下来考虑以上面的模型为基础，构建一个新的关于车站的模型，这里我们使用参考文献1中涉及到的研究某个车站限流后客流量变化的小波神经网络方法，下面是解决问题的流程：<br>根据流量承受能力构建优化函数选出要限流的车站，然后对这些车站进行限流操作，进行限流操作时使用上面提到的基于小波神经网络的动态限流预警模型，取其中限流效果最好的车站的数据填表。</li>
+<li>流量承受能力<br>流量承受能力表示某车站对其后续车站影响能力的总和，这里存在一个优化，限流不同的车站，分别计算限流后该线的流量承受能力，取承受能力排名前几的限流车站作为可选限流车站。<br>现在需要选取几个车站进行限流，限流的车站肯定是对整条线路影响最大的车站，为了衡量这种影响程度，构造一个目标量叫做流量承受能力，表达式如下：</li>
 </ol>
-<ul>
-<li>上面做关于不限制限流车站的问题时，是从整条线路角度考虑的问题，就是说</li>
-</ul>
+<p>该表达式的含义是限流某个车站后，其后续车站的可上车人数和总人数之比的综合最大，意味着平均来看，每个车站的上车率在对某个车站限流后的提升程度，以此来衡量限流车站的影响作用。这里限流某个车站的操作就可以尽量简化，只简要根据该车站的实际流量得到一个粗略的限流后流量变化就好，更精细化的流量变化需要后面使用小波神经网络求得和绘图。</p>
 <ul>
 <li>参考文献</li>
 </ul>
@@ -686,7 +685,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="姜浩">
-      <meta itemprop="description" content="生而为人，我很荣幸">
+      <meta itemprop="description" content="什么都没有 什么都不缺">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -795,7 +794,7 @@
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">姜浩</p>
-  <div class="site-description motion-element" itemprop="description">生而为人，我很荣幸</div>
+  <div class="site-description motion-element" itemprop="description">什么都没有 什么都不缺</div>
 </div>
   <nav class="site-state motion-element">
       <div class="site-state-item site-state-posts">
